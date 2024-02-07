@@ -49,7 +49,7 @@ function module_vdposts($args = null, $style = null)
                 case 'posts2':
 
                 ?>
-                    <div class="posts-item border-bottom pb-1 mb-2">
+                    <div class="posts-item border-bottom pb-2 mb-2">
                         <div class="row">
                             <div class="col-4 col-md-3">
                                 <div class="ratio ratio-1x1 bg-light border border-4">
@@ -74,7 +74,7 @@ function module_vdposts($args = null, $style = null)
                     break;
                 case 'carousel':
                 ?>
-                    <div class="carousel-post-item px-3">
+                    <div class="carousel-post-item px-2">
                         <div class="card p-2 border-secondary-subtle shadow-sm bg-light">
                             <div class="row">
                                 <div class="col-4">

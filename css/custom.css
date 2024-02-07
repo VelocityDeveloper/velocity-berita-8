@@ -1,143 +1,153 @@
 :root {
-    --color-theme: #740106;
-    --bs-body-font-size: .85rem !important;
-    --bs-body-font-family: Arial, Helvetica, sans-serif !important;
+  --color-theme: #740106;
+  --bs-body-font-size: 0.85rem !important;
+  --bs-body-font-family: Arial, Helvetica, sans-serif !important;
 }
-:root[data-bs-theme=light] {
-    --bs-link-color: #333333 !important;
-    --bs-link-hover-color: var(--color-theme) !important;
+:root[data-bs-theme="light"] {
+  --bs-link-color: #333333 !important;
+  --bs-link-hover-color: var(--color-theme) !important;
 }
-:root[data-bs-theme=light] body {
-    color: var(--bs-dark);
-    background-color: var(--bs-secondary);
+:root[data-bs-theme="light"] body {
+  color: var(--bs-dark);
+  background-color: var(--bs-secondary);
 }
-:root[data-bs-theme=light] .navbar-dark {
-    --bs-navbar-color: rgb(255 255 255);
+:root[data-bs-theme="light"] .navbar-dark {
+  --bs-navbar-color: rgb(255 255 255);
 }
-:root[data-bs-theme=light] .container {
-    background-color: var(--bs-white);
+:root[data-bs-theme="light"] .container {
+  background-color: var(--bs-white);
 }
-small{
-    font-size: .7rem !important;
+small {
+  font-size: 0.7rem !important;
 }
 .container {
-    max-width: 940px !important;
+  max-width: 940px !important;
 }
 .bg-header {
-    background: transparent !important;
+  background: transparent !important;
 }
 .bg-color-theme {
-	background-color: var(--color-theme);
+  background-color: var(--color-theme);
 }
 .navbar-brand img {
-    max-height: 70px !important;
-}
-#main-nav .secondary-menu .secondary-menu-body:before {
-    content: '';
-    border-width: 2.15rem 2rem 0 0;
-    border-color: transparent var(--bs-secondary);
-    position: absolute;
-    left: -2rem;
-    top: 0;
-    width: 2rem;
-    border-style: solid;
-    bottom: 0;
+  max-height: 90px !important;
 }
 .secondary-menu li a {
-    font-size: .8rem;
+  font-size: 0.8rem;
 }
 .datenow small:before {
-    content: '';
-    border-width: 0 1.2rem 1.5rem 0;
-    border-color: transparent var(--bs-light);
-    position: absolute;
-    left: -20px;
-    top: 0;
-    width: 20px;
-    border-style: solid;
-    bottom: 0;
+  content: "";
+  border-width: 0 1.2rem 1.5rem 0;
+  border-color: transparent var(--bs-light);
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: 20px;
+  border-style: solid;
+  bottom: 0;
 }
 #wrapper-content > .wrapper {
-	padding: 0;
+  padding: 0;
 }
 #wrapper-content > .wrapper > #content {
-    padding: 1rem;
+  padding: 1rem;
 }
 .widget .widget-title {
-    background: var(--color-theme);
-    color: var(--bs-white);
-    padding: 0.5rem 0.75rem;
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: bold;
+  background: var(--color-theme);
+  color: var(--bs-white);
+  padding: 0.5rem 0.75rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
 }
 .flickity-prev-next-button {
-    width: 1.75rem;
-    height: 1.75rem;
-    border-radius: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 0;
 }
 #beritaTabs .nav-item .nav-link.active {
-    background-color: var(--color-theme) !important;
-    border: 0 !important;
-    color: #ffffff;
+  background-color: var(--color-theme) !important;
+  border: 0 !important;
+  color: #ffffff;
 }
-#carouselHome .carousel-indicators [data-bs-target] {    
-    width: 0.65rem;
-    height: 0.65rem;
+#carouselHome .carousel-indicators [data-bs-target] {
+  width: 0.65rem;
+  height: 0.65rem;
 }
 .container-home-first {
-    background: repeating-linear-gradient( 45deg, #33333321, #33333321 5px, #21212100 5px, #21212100 10px );
+  background: repeating-linear-gradient(
+    45deg,
+    #33333321,
+    #33333321 5px,
+    #21212100 5px,
+    #21212100 10px
+  );
 }
 .part-post-home-3 .col-post a {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 .part-post-home-3 .col-post-first .posts-item {
-    transform: rotate(-3deg);
-    margin-bottom: 2rem !important;
-    margin-top: 1rem;
+  transform: rotate(-3deg);
+  margin-bottom: 2rem !important;
+  margin-top: 1rem;
 }
 .carousel-post-item {
-    width: 100%;
+  width: 100%;
+}
+.navbar-top a,
+.navbar-top a:visited,
+.navbar-top .nav-link {
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 10px;
+}
+.navbar-top a:hover,
+.navbar-top .current_page_item a {
+  color: #ffffff;
+  background-color: #888888;
+}
+.inside-w-100 img {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .right-sidebar {
+    max-width: 30%;
+  }
+  .carousel-post-item {
+    width: 50% !important;
+  }
+  #carouselHome .carousel-indicators {
+    justify-content: start;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  #carouselHome .carousel-caption {
+    top: 0;
+    left: 0;
+    right: inherit;
+    padding-left: 1rem;
+  }
+  .menu-header #main-menu > li:not(:last-child) > a {
+    border-right: 1px solid rgb(0 0 0 / 68%);
+  }
+  .menu-header #main-menu > li:not(:first-child) > a {
+    border-left: 1px solid rgb(255 255 255 / 8%);
+  }
 }
 
-@media(min-width: 768px) {
-    .right-sidebar {
-        max-width: 30%;
-    }
-    .carousel-post-item {
-        width: 50% !important;
-    }
-    #carouselHome .carousel-indicators {
-        justify-content: start;
-        margin-left: 0.5rem;
-        margin-bottom: 0.5rem;
-    }
-    #carouselHome .carousel-caption {
-        top: 0;
-        left: 0;
-        right: inherit;
-        padding-left: 1rem;
-    }
-    .menu-header #main-menu > li:not(:last-child) > a {
-        border-right: 1px solid rgb(0 0 0 / 68%);
-    }
-    .menu-header #main-menu > li:not(:first-child) > a {
-        border-left: 1px solid rgb(255 255 255 / 8%);
-    }
+@media (min-width: 1000px) {
+  .part-carousel-home .carousel-post-item {
+    width: 50% !important;
+  }
 }
 
-@media(min-width: 1000px) {
-    .part-carousel-home .carousel-post-item {
-        width: 33.33% !important;
-    }
+@media (max-width: 768px) {
+  #page {
+    padding: 1rem;
+  }
+  #carouselHome .carousel-indicators {
+    margin-bottom: 0.1rem;
+  }
 }
-
-@media(max-width: 768px) {
-    #page {
-        padding: 1rem;
-    }
-    #carouselHome .carousel-indicators {
-        margin-bottom: 0.1rem;
-    }
-}
-

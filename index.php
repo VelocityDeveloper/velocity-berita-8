@@ -22,12 +22,15 @@ $container = velocitytheme_option('justg_container_type', 'container');
 
 <div class="wrapper" id="index-wrapper">
 
-    <div class="container-home-first container p-3 bg-dark">
+    <div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
 
         <div class="row">
-        
+
+            <!-- Do the left sidebar check -->
+            <?php do_action('justg_before_content'); ?>
+
             <div class="col-md">
-                <?php
+            <?php
                 // The Query
                 $posts_query = new WP_Query(
                     array(
@@ -81,35 +84,21 @@ $container = velocitytheme_option('justg_container_type', 'container');
                 /* Restore original Post Data */
                 wp_reset_postdata();
                 ?>
-            </div>
-            <div class="col-md-4 ps-md-0 pt-4 pt-md-0">
-                <?php get_berita_iklan('iklan_home_1'); ?>
-            </div>
-            <div class="col-md-12 part_carousel_home">
-                <?php
-                $carousel_cat = velocitytheme_option('cat_carousel_home');
-                if ($carousel_cat !== 'disable') {
-                    echo '<div class="part-carousel-home pt-3">';
-                    module_vdposts(array(
-                        'post_type'         => 'post',
-                        'posts_per_page'    => 6,
-                        'cat'               => $carousel_cat,
-                    ), 'carousel');
-                    echo '</div>';
-                }
-                ?>
-            </div>
-        </div>
-    </div>
 
-    <div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
-
-        <div class="row">
-
-            <!-- Do the left sidebar check -->
-            <?php do_action('justg_before_content'); ?>
-
-            <div class="col-md">
+                <div class="col-md-12 part_carousel_home">
+                    <?php
+                    $carousel_cat = velocitytheme_option('cat_carousel_home');
+                    if ($carousel_cat !== 'disable') {
+                        echo '<div class="part-carousel-home pt-2 pb-3">';
+                        module_vdposts(array(
+                            'post_type'         => 'post',
+                            'posts_per_page'    => 6,
+                            'cat'               => $carousel_cat,
+                        ), 'carousel');
+                        echo '</div>';
+                    }
+                    ?>
+                </div>
 
                 <main class="site-main col order-2" id="main">
 

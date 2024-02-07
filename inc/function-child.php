@@ -54,6 +54,10 @@ function velocitychild_theme_setup()
 			'priority' => 10,
 		]);
 		$fieldiklan = [
+			'iklan_header'  => [
+				'label'			=> 'Iklan Heder',
+				'description'	=> '728x90',
+			],
 			'iklan_home_1'  => [
 				'label'			=> 'Iklan Home 1',
 				'description'	=> 'Iklan Halaman Depan 310x350',
@@ -271,6 +275,11 @@ function velocitychild_theme_setup()
 	remove_action('justg_do_footer', 'justg_the_footer_close');
 }
 
+add_action('justg_before_header', 'justg_header_berita_top');
+function justg_header_berita_top()
+{
+	require_once(get_stylesheet_directory() . '/inc/part-header-top.php');
+}
 ///add action builder part
 add_action('justg_header', 'justg_header_berita');
 function justg_header_berita()
