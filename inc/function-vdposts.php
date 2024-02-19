@@ -74,9 +74,9 @@ function module_vdposts($args = null, $style = null)
                     break;
                 case 'carousel':
                 ?>
-                    <div class="carousel-post-item px-2">
-                        <div class="card p-2 border-secondary-subtle shadow-sm bg-light">
-                            <div class="row">
+                    <div class="carousel-post-item px-1">
+                        <div class="card p-0 border-0 rounded-0 shadow-sm bg-light">
+                            <div class="row align-items-center">
                                 <div class="col-4">
                                     <div class="ratio ratio-1x1 bg-light">
                                         <?php if (has_post_thumbnail()) : ?>
@@ -90,7 +90,7 @@ function module_vdposts($args = null, $style = null)
                                     <div class="post-date">
                                         <small> <?php echo get_the_date(); ?> </small>
                                     </div>
-                                    <a href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>">
+                                    <a class="text-dark" href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>">
                                         <?php echo vdberita_limit_text(get_the_title(), 5); ?>
                                     </a>
                                 </div>

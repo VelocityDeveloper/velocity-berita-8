@@ -6,6 +6,29 @@
         <?php echo get_berita_iklan('iklan_header'); ?>
     </div>
 </div>
+<div class="row align-items-center mx-0 bg-white p-1">
+    <div class="col-12 col-md-8 px-0">
+        <?php
+        $sosmed = ['facebook', 'twitter', 'instagram', 'youtube'];
+        foreach ($sosmed as $key) {
+            $datalink  = velocitytheme_option('link_sosmed_' . $key);
+            if ($datalink) {
+                echo '<a class="d-inline-block bg-primary mx-1 text-center text-white" style="width: 30px; height: 30px; line-height: 30px" href="' . $datalink . '" target="_blank"><i class="fa fa-' . $key . '"></i></a>';
+            }
+        }
+        ?>
+    </div>
+    <div class="col-12 col-md-4 px-0">
+        <div class="search-header">
+            <form action="" method="get" class="d-flex overflow-hidden my-1 bg-light">
+                <input type="text" name="s" placeholder="Search" style="max-width: 100%;width: 100%;" class="form-control-sm bg-light border-0 rounded-0">
+                <button type="submit" class="btn btn-link text-secondary py-1 px-2">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
 <nav id="main-nav" class="navbar navbar-expand-md d-block navbar-light shadow-sm p-0" aria-labelledby="main-nav-label">
 
     <h2 id="main-nav-label" class="screen-reader-text">
@@ -42,14 +65,12 @@
                 ?>
             </div><!-- .offcanvas -->
         </div>
-        <div class="search-header">
-            <form action="" method="get" class="d-flex overflow-hidden border border-dark my-1 bg-light">
-                <input type="text" name="s" placeholder="Search" style="max-width: 7rem;" class="form-control-sm bg-light border-0 rounded-0">
-                <button type="submit" class="btn btn-link text-secondary py-1 px-2">
-                    <i class="fa fa-search"></i>
-                </button>
-            </form>
+        <div class="datenow text-end d-none d-md-block">
+            <small class="bg-light px-2 py-1 d-inline-block position-relative">
+                <?php echo date('l jS F Y', current_time('timestamp', 0)); ?>
+            </small>
         </div>
+
     </div>
 
 

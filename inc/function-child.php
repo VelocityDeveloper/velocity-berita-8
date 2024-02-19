@@ -15,6 +15,19 @@ function velocitychild_theme_setup()
 
 	if (class_exists('Kirki')) :
 
+		// remove panel in customizer 
+		Kirki::remove_panel('global_panel');
+		Kirki::remove_panel('panel_header');
+		Kirki::remove_panel('panel_footer');
+		Kirki::remove_panel('panel_antispam');
+		Kirki::remove_control('display_header_text');
+
+        Kirki::add_section('title_tagline', [
+            'panel'    => 'panel_berita',
+            'title'    => __('Site Identity', 'justg'),
+            'priority' => 10,
+        ]);
+		
 		Kirki::add_panel('panel_berita', [
 			'priority'    => 10,
 			'title'       => esc_html__('Berita', 'justg'),
@@ -340,3 +353,4 @@ add_action('wp_footer', 'tambahkan_hit_ke_post_meta');
 function justg_get_hit() {
 	echo get_post_meta(get_the_ID(),'hit',true);
 }
+

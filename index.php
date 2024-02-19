@@ -89,7 +89,7 @@ $container = velocitytheme_option('justg_container_type', 'container');
                     <?php
                     $carousel_cat = velocitytheme_option('cat_carousel_home');
                     if ($carousel_cat !== 'disable') {
-                        echo '<div class="part-carousel-home pt-2 pb-3">';
+                        echo '<div class="part-carousel-home pt-2 pb-3" style="margin: 0 -4px;">';
                         module_vdposts(array(
                             'post_type'         => 'post',
                             'posts_per_page'    => 6,
@@ -186,21 +186,20 @@ $container = velocitytheme_option('justg_container_type', 'container');
                         <div class="row">
                             <div class="col-md-6">
                                 <?php get_berita_iklan('iklan_home_2'); ?>
-
                                 <?php
                                 $post3_title    = velocitytheme_option('title_posts_home_3', 'Recent Posts');
                                 $post3_cat      = velocitytheme_option('cat_posts_home_3');
                                 ?>
-                                <div class="widget part_posts_home_3 bg-color-theme p-3 shadow">
-                                    <h3 class="widget-title p-0 d-flex align-items-center justify-content-between">
+                                <div class="widget part_posts_home_2">
+                                    <h3 class="widget-title d-flex align-items-center justify-content-between">
                                         <span><?php echo $post3_title; ?></span>
                                         <?php if ($post3_cat && $post3_cat !== 'disable') : ?>
-                                            <a class="btn btn-warning btn-sm shadow py-0 px-1" href="<?php echo get_tag_link($post3_cat); ?>">
+                                            <a class="btn btn-warning btn-sm py-0 px-1" href="<?php echo get_tag_link($post3_cat); ?>">
                                                 <i class="fa fa-rss"></i>
                                             </a>
                                         <?php endif; ?>
                                     </h3>
-                                    <div class="part-post-home-3 mt-4">
+                                    <div class="part-post-home-2 mt-4">
                                         <div class="col-post-first">
                                             <?php
                                             $post3_args = array(
@@ -208,7 +207,7 @@ $container = velocitytheme_option('justg_container_type', 'container');
                                                 'cat'       => $post3_cat,
                                                 'posts_per_page' => 1,
                                             );
-                                            module_vdposts($post3_args, 'homespecial');
+                                            module_vdposts($post3_args, 'posts1');
                                             ?>
                                         </div>
                                         <div class="col-post">
