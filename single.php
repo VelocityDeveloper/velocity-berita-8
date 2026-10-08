@@ -108,7 +108,7 @@ $format     = get_post_format() ?: 'standard';
 
                     <div class="single-post-nav d-md-flex justify-content-between border-top border-bottom pt-1 my-3">
                         <div class="share-post">
-                            <?php echo justg_share(); ?>
+                            <?php echo velocity_berita8_share(); ?>
                         </div>
                         <div class="nav-post">
                             <div class="btn-group" role="group" aria-label="Navigation Post">

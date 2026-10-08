@@ -26,7 +26,7 @@ function module_vdposts($args = null, $style = null)
                         <div class="ratio ratio-16x9 bg-light border border-4 mb-2">
                             <?php if (has_post_thumbnail()) : ?>
                                 <a href="<?php echo get_the_permalink(); ?>">
-                                    <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(), 'medium'); ?>" alt="" loading="lazy">
+                                    <img class="berita-cover" src="<?php echo esc_url(wp_get_attachment_image_url(get_post_thumbnail_id(), 'medium_large')); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" loading="lazy" decoding="async">
                                 </a>
                             <?php endif; ?>
                         </div>
@@ -55,7 +55,7 @@ function module_vdposts($args = null, $style = null)
                                 <div class="ratio ratio-1x1 bg-light border border-4">
                                     <?php if (has_post_thumbnail()) : ?>
                                         <a href="<?php echo get_the_permalink(); ?>">
-                                            <img src="<?php echo wp_get_attachment_thumb_url(get_post_thumbnail_id()); ?>" alt="" loading="lazy">
+                                            <img class="berita-cover" src="<?php echo esc_url(wp_get_attachment_thumb_url(get_post_thumbnail_id())); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" loading="lazy" decoding="async">
                                         </a>
                                     <?php endif; ?>
                                 </div>
@@ -81,7 +81,7 @@ function module_vdposts($args = null, $style = null)
                                     <div class="ratio ratio-1x1 bg-light">
                                         <?php if (has_post_thumbnail()) : ?>
                                             <a href="<?php echo get_the_permalink(); ?>">
-                                                <img data-flickity-lazyload="<?php echo wp_get_attachment_thumb_url(get_post_thumbnail_id()); ?>" alt="" loading="lazy">
+                                                <img class="berita-cover" src="<?php echo esc_url(wp_get_attachment_thumb_url(get_post_thumbnail_id())); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" loading="lazy" decoding="async">
                                             </a>
                                         <?php endif; ?>
                                     </div>
@@ -107,7 +107,7 @@ function module_vdposts($args = null, $style = null)
                                 <div class="ratio ratio-1x1 bg-light border border-4">
                                     <?php if (has_post_thumbnail()) : ?>
                                         <a href="<?php echo get_the_permalink(); ?>">
-                                            <img src="<?php echo wp_get_attachment_thumb_url(get_post_thumbnail_id()); ?>" alt="" loading="lazy">
+                                            <img class="berita-cover" src="<?php echo esc_url(wp_get_attachment_thumb_url(get_post_thumbnail_id())); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" loading="lazy" decoding="async">
                                         </a>
                                     <?php endif; ?>
                                 </div>
@@ -160,7 +160,7 @@ function module_vdposts($args = null, $style = null)
                         <div class="ratio ratio-16x9 bg-light mb-2">
                             <?php if (has_post_thumbnail()) : ?>
                                 <a href="<?php echo get_the_permalink(); ?>">
-                                    <img src="<?php echo wp_get_attachment_thumb_url(get_post_thumbnail_id()); ?>" alt="" loading="lazy">
+                                    <img class="berita-cover" src="<?php echo esc_url(wp_get_attachment_thumb_url(get_post_thumbnail_id())); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" loading="lazy" decoding="async">
                                 </a>
                             <?php endif; ?>
                         </div>

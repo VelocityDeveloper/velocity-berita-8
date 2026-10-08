@@ -5,7 +5,6 @@ jQuery(function($) {
         autoPlay: true,
         autoPlay: 3500,
         wrapAround: true,
-        lazyLoad: true,
         pageDots: false
     });
 });

@@ -22,6 +22,7 @@
 
 $inc = get_stylesheet_directory() . '/inc';
 $includes = [
+	'customizer.php',
 	'enqueue.php',
 	'function-child.php',
 	'function-vdposts.php',

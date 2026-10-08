@@ -1,5 +1,5 @@
 :root {
-  --color-theme: #999999;
+  --color-theme: #740106;
   --bs-body-font-size: 0.85rem !important;
   --bs-body-font-family: Arial, Helvetica, sans-serif !important;
 }
@@ -96,6 +96,26 @@ small {
 }
 .carousel-post-item {
   width: 100%;
+}
+.part-carousel-home {
+  margin: 0 -4px;
+}
+/* Foto artikel mengisi kotak rasio tanpa gepeng. */
+.ratio > a {
+  display: block;
+}
+.ratio img.berita-cover,
+.ratio > a > img.berita-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.berita-tanpa-gambar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #adb5bd;
+  font-size: 3rem;
 }
 .navbar-top a,
 .navbar-top a:visited,
